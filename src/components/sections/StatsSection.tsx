@@ -1,22 +1,22 @@
 const stats = [
   {
-    value: "350+",
-    label: "Videos Completed",
+    value: "5+",
+    label: "Years Experience",
     gradient: "from-[#00f2fe] to-[#4facfe]",
   },
   {
-    value: "4.8M+",
-    label: "Combined Organic Views",
+    value: "4",
+    label: "Core Software Tools",
     gradient: "from-[#ffb703] to-amber-500",
   },
   {
-    value: "1,200+",
-    label: "Hours Rendered",
+    value: "CIN",
+    label: "Cinematic Focus",
     gradient: "from-emerald-400 to-teal-400",
   },
   {
-    value: "12",
-    label: "Festival & Industry Awards",
+    value: "SOC",
+    label: "Social Content Ready",
     gradient: "from-[#00f2fe] to-[#ffb703]",
   },
 ];

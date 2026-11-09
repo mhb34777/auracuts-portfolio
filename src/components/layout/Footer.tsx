@@ -1,9 +1,5 @@
 import { Film } from "lucide-react";
-import {
-  GithubIcon,
-  LinkedinIcon,
-  TwitterIcon,
-} from "@/components/icons/SocialIcons";
+import { FacebookIcon, InstagramIcon } from "@/components/icons/SocialIcons";
 
 export default function Footer() {
   return (
@@ -12,35 +8,32 @@ export default function Footer() {
         <div className="flex items-center space-x-2">
           <Film className="h-5 w-5 text-[#00f2fe]" />
           <span className="font-mono text-lg font-bold tracking-wider text-white">
-            Aura<span className="text-[#00f2fe]">Cuts</span> Studio
+            Muhamam <span className="text-[#00f2fe]">Hamza Bhatti</span>
           </span>
         </div>
 
         <p className="text-center font-mono text-xs text-gray-500">
-          © 2026 AuraCuts. All rights reserved. Built with Next.js & Three.js.
+          © 2026 Muhamam Hamza Bhatti. Professional Video Editor.
         </p>
 
         <div className="flex items-center space-x-4 text-gray-400">
           <a
-            href="#hero"
+            href="https://www.facebook.com/bhatti.g.771282"
+            target="_blank"
+            rel="noreferrer"
             className="transition hover:text-[#00f2fe]"
-            aria-label="Twitter"
+            aria-label="Facebook"
           >
-            <TwitterIcon className="h-5 w-5" />
+            <FacebookIcon className="h-5 w-5" />
           </a>
           <a
-            href="#hero"
+            href="https://www.instagram.com/hamza_bhatti_3412?xtok=MXBvOGUxbmNocjdkYw=="
+            target="_blank"
+            rel="noreferrer"
             className="transition hover:text-[#00f2fe]"
-            aria-label="LinkedIn"
+            aria-label="Instagram"
           >
-            <LinkedinIcon className="h-5 w-5" />
-          </a>
-          <a
-            href="#hero"
-            className="transition hover:text-[#00f2fe]"
-            aria-label="GitHub"
-          >
-            <GithubIcon className="h-5 w-5" />
+            <InstagramIcon className="h-5 w-5" />
           </a>
         </div>
       </div>

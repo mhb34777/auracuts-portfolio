@@ -31,15 +31,15 @@ export default function SkillsSection() {
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <div className="mb-2 inline-flex items-center space-x-2 font-mono text-sm tracking-wider text-[#ffb703] uppercase">
             <Cpu className="h-4 w-4" />
-            <span>Tech Stack & Modern Toolkit</span>
+            <span>Professional Editing Tools</span>
           </div>
           <h2 className="mb-4 text-3xl font-extrabold text-white sm:text-5xl">
-            Industry Standard Tools & AI Workflows
+            Industry-Standard Software & Creative Toolkit
           </h2>
           <p className="text-gray-400">
-            Combining classic narrative cinema techniques with cutting-edge
-            artificial intelligence video tools for ultra-fast, high-fidelity
-            post-production.
+            I work across the most trusted editing platforms to craft cinematic
+            storytelling, brand visuals, and polished digital content with speed and
+            precision.
           </p>
         </div>
 

@@ -22,6 +22,8 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
     };
   }, [onClose]);
 
+  const isEmbedUrl = /youtube|youtu\.be/.test(video.videoUrl);
+
   return (
     <div
       className="fixed inset-0 z-50 flex animate-[fadeIn_0.25s_ease] items-center justify-center bg-black/90 p-4 backdrop-blur-md"
@@ -49,13 +51,23 @@ export default function VideoModal({ video, onClose }: VideoModalProps) {
         </div>
 
         <div className="aspect-video w-full bg-black">
-          <iframe
-            src={video.videoUrl}
-            title={video.title}
-            className="h-full w-full"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          {isEmbedUrl ? (
+            <iframe
+              src={video.videoUrl}
+              title={video.title}
+              className="h-full w-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          ) : (
+            <video
+              src={video.videoUrl}
+              controls
+              autoPlay
+              playsInline
+              className="h-full w-full object-contain"
+            />
+          )}
         </div>
 
         <div className="flex flex-col items-start justify-between gap-4 bg-gray-900/60 p-6 sm:flex-row sm:items-center">

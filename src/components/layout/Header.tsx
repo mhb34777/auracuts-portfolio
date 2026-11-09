@@ -51,8 +51,8 @@ export default function Header({
               <Film className="h-5 w-5 text-[#00f2fe]" />
             </div>
           </div>
-          <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text font-mono text-xl font-bold tracking-wider text-transparent uppercase">
-            Aura<span className="text-[#00f2fe]">Cuts</span>
+          <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text font-mono text-sm font-bold tracking-wider text-transparent uppercase sm:text-base">
+            Hamza <span className="text-[#00f2fe]">Bhatti</span>
           </span>
         </button>
 
@@ -77,14 +77,14 @@ export default function Header({
         </nav>
 
         <div className="hidden items-center space-x-4 md:flex">
-          <button
+          {/* <button
             type="button"
             onClick={onDeployClick}
             className="flex items-center space-x-2 rounded-lg border border-gray-700 bg-gray-900/60 px-3.5 py-1.5 text-xs text-gray-300 transition-all hover:border-[#00f2fe]/50 hover:text-white"
           >
             <GithubIcon className="h-3.5 w-3.5" />
-            <span>Deploy to GitHub</span>
-          </button>
+            <span>Deploy Guide</span>
+          </button> */}
 
           <button
             type="button"

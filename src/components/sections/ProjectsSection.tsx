@@ -2,25 +2,14 @@
 
 import Image from "next/image";
 import { Film, Play } from "lucide-react";
-import { projectFilters, projects } from "@/data/projects";
-import type { Project, ProjectCategory } from "@/types";
+import { projects } from "@/data/projects";
+import type { Project } from "@/types";
 
 interface ProjectsSectionProps {
-  filter: ProjectCategory;
-  setFilter: (filter: ProjectCategory) => void;
   onSelectVideo: (video: Project) => void;
 }
 
-export default function ProjectsSection({
-  filter,
-  setFilter,
-  onSelectVideo,
-}: ProjectsSectionProps) {
-  const filteredProjects =
-    filter === "all"
-      ? projects
-      : projects.filter((project) => project.category === filter);
-
+export default function ProjectsSection({ onSelectVideo }: ProjectsSectionProps) {
   return (
     <section id="portfolio" className="border-t border-gray-900 bg-[#0b0c10] py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -28,33 +17,17 @@ export default function ProjectsSection({
           <div>
             <div className="mb-2 flex items-center space-x-2 font-mono text-sm tracking-wider text-[#00f2fe] uppercase">
               <Film className="h-4 w-4" />
-              <span>Selected Portfolio Showcase</span>
+              <span>My Work</span>
             </div>
             <h2 className="text-3xl font-extrabold text-white sm:text-5xl">
-              Featured Editing Projects
+              Portfolio Highlights
             </h2>
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-2 md:mt-0">
-            {projectFilters.map((tab) => (
-              <button
-                key={tab.id}
-                type="button"
-                onClick={() => setFilter(tab.id)}
-                className={`rounded-lg px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-all duration-200 ${
-                  filter === tab.id
-                    ? "bg-[#00f2fe] text-black shadow-lg shadow-[#00f2fe]/20"
-                    : "border border-gray-800 bg-gray-900 text-gray-400 hover:text-white"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {filteredProjects.map((project) => (
+          {projects.map((project) => (
             <article
               key={project.id}
               className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-gray-800 bg-gray-900/60 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-[#00f2fe]/50"

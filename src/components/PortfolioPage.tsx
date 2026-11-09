@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
+import AboutSection from "@/components/sections/AboutSection";
 import ShowreelBanner from "@/components/sections/ShowreelBanner";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
@@ -14,13 +15,12 @@ import ContactSection from "@/components/sections/ContactSection";
 import VideoModal from "@/components/modals/VideoModal";
 import DeployModal from "@/components/modals/DeployModal";
 import CustomCursor from "@/components/ui/CustomCursor";
-import type { ProjectCategory, VideoItem } from "@/types";
+import type { VideoItem } from "@/types";
 
 export default function PortfolioPage() {
   const [activeSection, setActiveSection] = useState("hero");
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
   const [showDeployModal, setShowDeployModal] = useState(false);
-  const [filter, setFilter] = useState<ProjectCategory>("all");
 
   return (
     <div className="min-h-screen bg-[#0b0c10] font-sans text-gray-100 selection:bg-[#00f2fe] selection:text-black">
@@ -33,12 +33,9 @@ export default function PortfolioPage() {
 
       <main>
         <HeroSection onNavigate={setActiveSection} />
+        <AboutSection />
         <ShowreelBanner onPlayReel={setSelectedVideo} />
-        <ProjectsSection
-          filter={filter}
-          setFilter={setFilter}
-          onSelectVideo={setSelectedVideo}
-        />
+        <ProjectsSection onSelectVideo={setSelectedVideo} />
         <SkillsSection />
         <WorkflowSection />
         <StatsSection />

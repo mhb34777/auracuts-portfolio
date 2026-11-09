@@ -1,4 +1,11 @@
-export type ProjectCategory = "all" | "commercials" | "vfx" | "youtube" | "showreels";
+export type ProjectCategory =
+  | "all"
+  | "cinematic"
+  | "reels"
+  | "youtube"
+  | "promotional"
+  | "motion"
+  | "short-form";
 
 export interface Project {
   id: number;

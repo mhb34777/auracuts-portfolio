@@ -8,14 +8,15 @@ export default function WorkflowSection() {
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <div className="mb-2 inline-flex items-center space-x-2 font-mono text-sm tracking-wider text-[#00f2fe] uppercase">
             <Layers className="h-4 w-4" />
-            <span>Briefcase Pipeline</span>
+            <span>My Experience</span>
           </div>
           <h2 className="mb-4 text-3xl font-extrabold text-white sm:text-5xl">
-            The 5-Step Post-Production Workflow
+            5 Years of Story-Driven Video Editing
           </h2>
           <p className="text-gray-400">
-            A structured, deadline-oriented editing pipeline ensuring seamless
-            communication and broadcast-ready deliverables.
+            I bring a structured post-production process to every project, combining
+            creative storytelling with cinematic finishing, motion graphics, and
+            efficient delivery for digital audiences.
           </p>
         </div>
 

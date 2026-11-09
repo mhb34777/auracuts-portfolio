@@ -32,23 +32,23 @@ export default function ShowreelBanner({ onPlayReel }: ShowreelBannerProps) {
                 <Play className="ml-1 h-10 w-10 fill-current" />
               </div>
               <span className="mt-4 rounded-full border border-[#00f2fe]/30 bg-black/70 px-4 py-1.5 font-mono text-sm tracking-widest text-[#00f2fe] uppercase backdrop-blur-md">
-                WATCH MASTER SHOWREEL (2026)
+                Watch My Showcase
               </span>
             </div>
 
             <div className="absolute right-6 bottom-6 left-6 flex items-end justify-between">
               <div className="text-left">
                 <span className="font-mono text-xs font-semibold tracking-wider text-[#ffb703]">
-                  FEATURED REEL
+                  Show Case
                 </span>
                 <h3 className="text-xl font-bold text-white sm:text-3xl">
-                  Cinematic Motion & Post-Production Reel
+                  Crafting Visual Stories with Cinematic Flair & Creative Impact.
                 </h3>
               </div>
-              <div className="hidden text-right font-mono text-xs text-gray-400 sm:block">
-                <div>FORMAT: RED RAW / ProRes 4444 XQ</div>
-                <div>AUDIO: Dolby Atmos Stereo Mix</div>
-              </div>
+              {/* <div className="hidden text-right font-mono text-xs text-gray-400 sm:block">
+                <div>Editing Style: Cinematic & Brand-Driven</div>
+                <div>Formats: Social, YouTube, Promo, Reel</div>
+              </div> */}
             </div>
           </button>
         </div>

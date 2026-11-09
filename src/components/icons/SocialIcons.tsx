@@ -16,6 +16,38 @@ export function GithubIcon({ className, ...props }: IconProps) {
   );
 }
 
+export function FacebookIcon({ className, ...props }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden
+      {...props}
+    >
+      <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.927.258-1.559 1.587-1.559h1.7V2.868c-.294-.039-1.3-.126-2.475-.126-2.446 0-4.12 1.492-4.12 4.231v2.359H7.01v3.209h2.764v8.196h3.623Z" />
+    </svg>
+  );
+}
+
+export function InstagramIcon({ className, ...props }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      className={className}
+      aria-hidden
+      {...props}
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 export function LinkedinIcon({ className, ...props }: IconProps) {
   return (
     <svg

@@ -46,8 +46,8 @@ export default function ContactSection({ onDeployClick }: ContactSectionProps) {
             <div className="space-y-4 font-mono text-sm">
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="h-5 w-5 text-[#00f2fe]" />
-                <a href="mailto:hello@hamzabhatti.com" className="transition hover:text-[#00f2fe]">
-                  hello@hamzabhatti.com
+                <a href="mailto:mhb34000@gmail.com" className="transition hover:text-[#00f2fe]">
+                  mhb34000@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">

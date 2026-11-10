@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex items-center space-x-2">
           <Film className="h-5 w-5 text-[#00f2fe]" />
           <span className="font-mono text-lg font-bold tracking-wider text-white">
-            Muhamam <span className="text-[#00f2fe]">Hamza Bhatti</span>
+            Muhammad <span className="text-[#00f2fe]">Hamza Bhatti</span>
           </span>
         </div>
 

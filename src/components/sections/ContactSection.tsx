@@ -10,11 +10,44 @@ interface ContactSectionProps {
 
 export default function ContactSection({ onDeployClick }: ContactSectionProps) {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setFormSubmitted(true);
-    setTimeout(() => setFormSubmitted(false), 5000);
+    setIsSubmitting(true);
+    setFormError("");
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+          website: formData.get("website"),
+        }),
+      });
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Your message could not be sent. Please try again.");
+      }
+
+      setFormSubmitted(true);
+      setTimeout(() => setFormSubmitted(false), 5000);
+    } catch (error) {
+      setFormError(
+        error instanceof Error
+          ? error.message
+          : "Your message could not be sent. Please try again.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const socialLinks = [
@@ -104,6 +137,20 @@ export default function ContactSection({ onDeployClick }: ContactSectionProps) {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                <div
+                  className="absolute -left-[9999px] h-px w-px overflow-hidden"
+                  aria-hidden="true"
+                >
+                  <label>
+                    Leave this field empty
+                    <input
+                      type="text"
+                      name="website"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </label>
+                </div>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div>
                     <label className="mb-2 block font-mono text-xs tracking-wider text-gray-400 uppercase">
@@ -111,7 +158,9 @@ export default function ContactSection({ onDeployClick }: ContactSectionProps) {
                     </label>
                     <input
                       type="text"
+                      name="name"
                       required
+                      maxLength={100}
                       placeholder="Alice Johnson etc."
                       className="w-full rounded-xl border border-gray-800 bg-gray-950 px-4 py-3 text-sm text-white transition focus:border-[#00f2fe] focus:outline-none"
                     />
@@ -122,7 +171,9 @@ export default function ContactSection({ onDeployClick }: ContactSectionProps) {
                     </label>
                     <input
                       type="email"
+                      name="email"
                       required
+                      maxLength={254}
                       placeholder="you@example.com"
                       className="w-full rounded-xl border border-gray-800 bg-gray-950 px-4 py-3 text-sm text-white transition focus:border-[#00f2fe] focus:outline-none"
                     />
@@ -134,19 +185,28 @@ export default function ContactSection({ onDeployClick }: ContactSectionProps) {
                     Message
                   </label>
                   <textarea
+                    name="message"
                     rows={6}
                     required
+                    maxLength={5000}
                     placeholder="Tell me about your project, timeline, platform, and the kind of editing you need..."
                     className="w-full rounded-xl border border-gray-800 bg-gray-950 px-4 py-3 text-sm text-white transition focus:border-[#00f2fe] focus:outline-none"
                   />
                 </div>
 
+                {formError && (
+                  <p role="alert" className="text-sm text-red-300">
+                    {formError}
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="flex w-full items-center justify-center space-x-2 rounded-xl bg-gradient-to-r from-[#00f2fe] to-[#4facfe] py-4 text-sm font-extrabold tracking-wider text-black shadow-lg shadow-[#00f2fe]/20 transition duration-200 hover:scale-[1.01] hover:shadow-[#00f2fe]/40"
+                  disabled={isSubmitting}
+                  className="flex w-full items-center justify-center space-x-2 rounded-xl bg-gradient-to-r from-[#00f2fe] to-[#4facfe] py-4 text-sm font-extrabold tracking-wider text-black shadow-lg shadow-[#00f2fe]/20 transition duration-200 hover:scale-[1.01] hover:shadow-[#00f2fe]/40 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   <Send className="h-4 w-4 fill-current" />
-                  <span>Send Message</span>
+                  <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
                 </button>
               </form>
             )}

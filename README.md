@@ -1,4 +1,4 @@
-# AuraCuts — Cinematic Video Editor Portfolio
+# Hamza-Bhatti — Cinematic Video Editor Portfolio
 
 Next.js portfolio for a senior video editor / motion graphics designer, ported from the original React + Three.js design.
 

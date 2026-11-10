@@ -1,5 +1,18 @@
 import type { Metadata } from "next";
+import { Caveat, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+
+const displayFont = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  variable: "--font-display",
+});
+
+const signatureFont = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-signature",
+});
 
 export const metadata: Metadata = {
   title: "Muhamam Hamza Bhatti | Professional Video Editor",
@@ -22,7 +35,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html
+      lang="en"
+      className={`h-full antialiased ${displayFont.variable} ${signatureFont.variable}`}
+    >
       <body className="grain-overlay min-h-full bg-[#0b0c10] text-gray-100">
         {children}
       </body>

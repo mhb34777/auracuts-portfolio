@@ -32,6 +32,23 @@ body {
   font-family: var(--font-sans);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), serif;
+}
+
+.hero-name {
+  font-family: var(--font-display), serif;
+}
+
+.hero-signature {
+  font-family: var(--font-signature), cursive;
+}
+
 ::selection {
   background: #00f2fe;
   color: #000;

@@ -11,7 +11,7 @@ export default function WorkflowSection() {
             <span>My Experience</span>
           </div>
           <h2 className="mb-4 text-3xl font-extrabold text-white sm:text-5xl">
-            5 Years of Story-Driven Video Editing
+            5+ Years of Story-Driven Video Editing
           </h2>
           <p className="text-gray-400">
             I bring a structured post-production process to every project, combining

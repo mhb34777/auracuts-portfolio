@@ -17,9 +17,9 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Professional workflow, great communication, and an editing style that balances emotion with technical precision.",
-    name: "Project Collaborator",
-    title: "Cinematic Production",
+      "Super reliable editor with an exceptional eye for storytelling rhythm. Always delivers ahead of schedule even with heavy 8K RED footage.",
+    name: "David ",
+    title: "Executive Producer, Synthetix",
     rating: 5,
   },
   {

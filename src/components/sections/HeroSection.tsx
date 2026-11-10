@@ -35,7 +35,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           </div>
 
           <h1 className="hero-name mb-6 text-3xl leading-tight font-semibold tracking-wide text-white sm:text-4xl md:text-5xl">
-            Muhammad Hamza Bhatti
+            Hamza Bhatti
             <span className="hero-signature mt-2 block bg-gradient-to-r from-[#00f2fe] via-[#4facfe] to-[#ffb703] bg-clip-text text-xl font-normal text-transparent sm:text-2xl md:text-3xl">
               <b>Professional Video Editor &amp; Visual Storyteller</b>
             </span>

@@ -61,7 +61,7 @@ export default function DeployModal({ onClose }: DeployModalProps) {
             <p className="pl-8 text-xs text-gray-400">
               Go to github.com and create a new repository named{" "}
               <code className="rounded bg-gray-900 px-1 py-0.5 text-[#00f2fe]">
-                video-editor-portfolio
+                Hamza-Bhatti
               </code>
               .
             </p>
@@ -94,7 +94,7 @@ export default function DeployModal({ onClose }: DeployModalProps) {
               <div>git branch -M main</div>
               <div>
                 git remote add origin
-                https://github.com/USERNAME/video-editor-portfolio.git
+                https://github.com/USERNAME/Hamza-Bhatti.git
               </div>
               <div>git push -u origin main</div>
             </div>

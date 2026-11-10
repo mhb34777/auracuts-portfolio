@@ -16,7 +16,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="mb-5 max-w-2xl text-base leading-relaxed text-gray-300">
-              I am Muhamam Hamza Bhatti, a professional video editor with 5 years
+              I am Hamza Bhatti, a professional video editor with 5 years
               of experience transforming ideas into cinematic, engaging, and
               emotionally resonant visuals. My work blends storytelling, pacing,
               and technical precision to make every frame feel purposeful.

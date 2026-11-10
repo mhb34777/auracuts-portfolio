@@ -8,12 +8,12 @@ export default function Footer() {
         <div className="flex items-center space-x-2">
           <Film className="h-5 w-5 text-[#00f2fe]" />
           <span className="font-mono text-lg font-bold tracking-wider text-white">
-            Muhammad <span className="text-[#00f2fe]">Hamza Bhatti</span>
+            Hamza <span className="text-[#00f2fe]">Bhatti</span>
           </span>
         </div>
 
         <p className="text-center font-mono text-xs text-gray-500">
-          © 2026 Muhamam Hamza Bhatti. Professional Video Editor.
+          © 2026 Hamza Bhatti. Professional Video Editor.
         </p>
 
         <div className="flex items-center space-x-4 text-gray-400">
